@@ -1,0 +1,11 @@
+{
+  "name": "fix-user-roles",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "fix-roles": "node fix-user-roles.js"
+  },
+  "dependencies": {
+    "mongoose": "^8.18.1"
+  }
+}
