@@ -1,12 +1,17 @@
 # 📚 Notes Manager - Full Stack MERN Application
 
-A comprehensive full-stack notes management application built with Next.js, featuring user authentication, CRUD operations, and admin functionality for content moderation.
+A comprehensive full-stack notes management application built with Next.js, featuring user authentication, CRUD operations, admin functionality, and a cute animated mascot!
+
+## 🚀 Live Demo
+[Live on Vercel](https://your-app-name.vercel.app)
 
 ## 🎯 Features
 
 ### User Features
-- **User Registration & Login** - Secure email/password authentication
+- **User Registration & Login** - Secure email/password authentication with JWT
 - **Personal Notes Management** - Create, read, update, and delete personal notes
+- **Animated UI** - Beautiful glass morphism design with floating animations
+- **Cute Robot Mascot** - Interactive animated mascot that welcomes users
 - **Responsive Design** - Works seamlessly on desktop and mobile devices
 - **Real-time Updates** - Instant note updates without page refresh
 
@@ -322,13 +327,63 @@ ADMIN_NAME=Administrator
 
 ## 📄 License
 
+## 🚀 Deployment on Vercel
+
+### Prerequisites
+1. **MongoDB Atlas Account**: Sign up at [MongoDB Atlas](https://www.mongodb.com/atlas)
+2. **Vercel Account**: Sign up at [Vercel](https://vercel.com)
+3. **GitHub Repository**: Your code should be pushed to GitHub
+
+### Step 1: Import Project to Vercel
+1. Go to [Vercel Dashboard](https://vercel.com/dashboard)
+2. Click "New Project"
+3. Import from your GitHub repository: `SGKP/Note-Manager`
+4. Leave build settings as default (Vercel auto-detects Next.js)
+
+### Step 2: Configure Environment Variables
+In your Vercel project settings, add these environment variables:
+
+```bash
+# MongoDB Atlas
+MONGODB_URI=mongodb+srv://shubhamgarg8073:shubhamgarg8073@cluster1.uyicwn2.mongodb.net/notes-manager?retryWrites=true&w=majority&appName=Cluster1
+
+# JWT Secret (generate a secure random string)
+JWT_SECRET=your-super-secure-production-jwt-secret-key-here-make-it-long-and-random
+
+# NextAuth Configuration
+NEXTAUTH_SECRET=your-super-secure-nextauth-production-secret-here
+NEXTAUTH_URL=https://your-app-name.vercel.app
+
+# Admin Credentials
+ADMIN_EMAIL=admin@notesmanager.com
+ADMIN_PASSWORD=admin123
+ADMIN_NAME=Administrator
+```
+
+### Step 3: Deploy
+1. Click "Deploy" - Vercel will automatically build and deploy your app
+2. Your app will be live at `https://your-app-name.vercel.app`
+
+### Step 4: Setup Database
+1. Your MongoDB Atlas database will be automatically connected
+2. The first time you use admin login, the admin user will be created automatically
+3. Users can register and start creating notes immediately
+
+### Production Notes
+- Environment variables are automatically loaded from Vercel
+- The app automatically handles production vs development environments
+- SSL/HTTPS is handled by Vercel automatically
+- Your database is hosted on MongoDB Atlas cloud
+
+## 📝 License
+
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 👨‍💻 Author
 
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
+**Shubham Garg**
+- GitHub: [@SGKP](https://github.com/SGKP)
+- Repository: [Note-Manager](https://github.com/SGKP/Note-Manager)
 
 ## 🙏 Acknowledgments
 

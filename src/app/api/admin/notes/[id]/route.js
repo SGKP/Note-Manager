@@ -8,7 +8,7 @@ async function handleDELETE(request, { params }) {
   try {
     await connectDB();
     
-    const { id } = params;
+    const { id } = await params;
     
     const note = await Note.findById(id).populate('userId', 'name email');
     

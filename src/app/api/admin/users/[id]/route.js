@@ -9,7 +9,7 @@ async function handleDELETE(request, { params }) {
   try {
     await connectDB();
     
-    const { id } = params;
+    const { id } = await params;
     
     // Don't allow admin to delete themselves
     if (id === request.user._id.toString()) {

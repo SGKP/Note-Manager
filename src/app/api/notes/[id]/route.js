@@ -38,7 +38,7 @@ async function handlePUT(request, { params }) {
   try {
     await connectDB();
     
-    const { id } = params;
+    const { id } = await params;
     const { title, description } = await request.json();
 
     // Validation
@@ -92,7 +92,7 @@ async function handleDELETE(request, { params }) {
   try {
     await connectDB();
     
-    const { id } = params;
+    const { id } = await params;
     
     const note = await Note.findOneAndDelete({ 
       _id: id, 
